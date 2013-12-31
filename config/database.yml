@@ -1,0 +1,22 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: raincoat_development
+  pool: 5
+  username: raincoat
+  password:
+
+  adapter: postgresql
+  encoding: unicode
+  database: raincoat_test
+  pool: 5
+  username: raincoat
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: raincoat_production
+  pool: 5
+  username: raincoat
+  password:
