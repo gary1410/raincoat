@@ -3,10 +3,18 @@
 <head>
   <title>Raincoat</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link rel="stylesheet" type="text/css" href="clouds.css">
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="clouds">
+    <div class="cloud x1"></div>
+    <div class="cloud x2"></div>
+    <div class="cloud x3"></div>
+    <div class="cloud x4"></div>
+    <div class="cloud x5"></div>
+  </div>
 
 <%= yield %>
 
