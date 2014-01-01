@@ -4,7 +4,7 @@ ruby "2.0.0"
 gem 'rails', '3.2.14'
 gem 'pg'
 gem 'jquery-rails'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :development do
   gem 'better_errors'
