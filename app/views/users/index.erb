@@ -1,0 +1,7 @@
+<%= form_for @user, url: {action: "create"}, remote: true do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :zipcode %>
+  <%= f.text_field :email %>
+  <%= f.text_field :password %>
+  <%= f.submit "Submit", id: "submit" %>
+<% end %>
