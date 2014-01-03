@@ -13,6 +13,8 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 RSpec.configure do |config|
   config.include Capybara::DSL
 
+  config.include FactoryGirl::Syntax::Methods
+
   config.mock_with :rspec
 
   config.before(:suite) do
