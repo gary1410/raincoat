@@ -1,10 +1,60 @@
+html {
+	font-size: 22px;
+}
+
+.container{
+	width: 100%;
+}
+
 #new_user {
+	text-align: center;
+}
+
+#new_user input {
 	position: relative;
 	z-index: 1;
+	font-size: 1rem;
+	padding: .5rem;
+	margin-bottom: .875rem;
+	border: none;
+	outline: none;
+	text-align: center;
+}
+
+#new_user .button {
+	width: 8rem;
 }
 
 h1 {
 	position: relative;
 	z-index: 1;
 	text-align: center;
+}
+
+.form {
+	display: block;
+	height: 900px;
+	width: 100%;
+}
+
+div.name {
+	position: relative;
+	height: 100%;
+	background-color: red;
+	padding-top: 50px;
+}
+
+div.zipcode{
+	/*display: none;*/
+	background-color: blue;
+}
+
+div.email {
+	/*display: none;*/
+	background-color: green;
+}
+
+div.password{
+	/*display: none;*/
+	background-color: pink;
 }
