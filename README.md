@@ -20,7 +20,13 @@
   - password
 
 ***3. MVP***
-  - Release 1
+  - Styled
+  - Get info from user
+  - implement weather API
+  - Ajaxify the weather info on submit
+  - Show user's personal weather information (figure out how to display it)
+
+***Release 1***
   - Getting all information from user (step 2).
   - AJAX
 
