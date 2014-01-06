@@ -1,7 +1,7 @@
 <%= form_for @user, url: {action: "create"}, remote: true do |f| %>
-  <%= f.text_field :name %>
-  <%= f.text_field :zipcode %>
-  <%= f.text_field :email %>
-  <%= f.text_field :password %>
+  <%= f.text_field :name, placeholder: "What's your name?" %>
+  <%= f.text_field :zipcode, placeholder: "What's your zip code?" %>
+  <%= f.text_field :email, placeholder: "What's your email address?" %>
+  <%= f.password_field :password, placeholder: "Enter a password" %>
   <%= f.submit "Submit", id: "submit" %>
 <% end %>
