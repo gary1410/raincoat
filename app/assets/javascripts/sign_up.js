@@ -5,7 +5,7 @@ var SignUp = {
 
 	displayHome: function(event, data, status, xhr) {
 		$('#new_user').css('display','none')
-		$('body').append(data.name)
+		$('#clouds').prepend(data.name)
 	}
 }
 
