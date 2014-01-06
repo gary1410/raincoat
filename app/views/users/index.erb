@@ -1,7 +1,14 @@
-<%= form_for @user, url: {action: "create"}, remote: true do |f| %>
-  <%= f.text_field :name, placeholder: "What's your name?" %>
-  <%= f.text_field :zipcode, placeholder: "What's your zip code?" %>
-  <%= f.text_field :email, placeholder: "What's your email address?" %>
-  <%= f.password_field :password, placeholder: "Enter a password" %>
-  <%= f.submit "Submit", id: "submit" %>
-<% end %>
+<h1>Raincoat</h1>
+
+<div id="form-container">
+	<%= form_for @user, url: {action: "create"}, remote: true do |f| %>
+	  <%= f.text_field :name, placeholder: "What's your name?" %>
+	  <%= f.submit "Get Started", id: "name-submit", class: "button" %><br/>
+	  <%= f.text_field :zipcode, placeholder: "What's your zip code?" %>
+	   <%= f.submit "Next", id: "zipcode-submit", class: "button" %><br/>
+	  <%= f.text_field :email, placeholder: "What's your email address?" %>
+	 <%= f.submit "Next", id: "email-submit", class: "button" %><br/>
+	  <%= f.password_field :password, placeholder: "Enter a password" %>
+	  <%= f.submit "Submit", id: "submit", class: "button" %>
+	<% end %>
+</div>

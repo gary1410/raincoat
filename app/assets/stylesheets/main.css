@@ -1,6 +1,27 @@
-#new_user {
+html {
+	font-size: 22px;
+}
+
+#form-container {
+	width: 25rem;
+	margin: 0 auto;
+}
+
+#new_user input {
 	position: relative;
 	z-index: 1;
+	font-size: 1rem;
+	padding: .5rem;
+	margin: 0 auto;
+	margin-bottom: .875rem;
+	border: none;
+	outline: none;
+	text-align: center;
+}
+
+#new_user .button {
+	float: right;
+	width: 8rem;
 }
 
 h1 {
