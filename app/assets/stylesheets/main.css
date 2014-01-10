@@ -21,8 +21,12 @@ html {
 	text-align: center;
 }
 
-#new_user .button {
+.button {
 	width: 8rem;
+}
+
+.button:hover{
+	background-color: green;
 }
 
 h1 {
@@ -39,22 +43,21 @@ h1 {
 
 div.name {
 	position: relative;
-	height: 100%;
 	background-color: red;
 	padding-top: 50px;
 }
 
 div.zipcode{
-	/*display: none;*/
+	display: none;
 	background-color: blue;
 }
 
 div.email {
-	/*display: none;*/
+	display: none;
 	background-color: green;
 }
 
 div.password{
-	/*display: none;*/
+	display: none;
 	background-color: pink;
 }
