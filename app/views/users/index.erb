@@ -8,7 +8,7 @@
 	</div>
 
 	<%= form_for @user, url: {action: "create"}, remote: true do |f| %>
-	  
+
 		<div class="form name">
 			<%= f.text_field :name, placeholder: "What's your name?" %>
 			<%= f.submit "Get Started", id: "name-submit", class: "button" %><br/>
