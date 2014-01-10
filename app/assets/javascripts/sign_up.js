@@ -17,10 +17,20 @@ var SetWindow = {
   }
 }
 
+var insertName = {
+  name: function(){
+    $submittedName = $('#user_name').val()
+    if ($submittedName){
+      $('#submitted-name').text($submittedName)
+    }
+  }
+}
+
 var ScrollOn = {
   clickName: function(){
     $('#name-submit').on('click', function(){
       $('.zipcode').css('display', 'block')
+      insertName.name()
       var $zipcode = $('.zipcode').position().top
       $('body').animate({scrollTop: $zipcode}, 300)
     })
