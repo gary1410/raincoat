@@ -11,13 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140101025524) do
+ActiveRecord::Schema.define(:version => 20140111074137) do
 
   create_table "users", :force => true do |t|
     t.integer "zipcode"
     t.string  "email"
     t.string  "name"
     t.string  "password_digest"
+    t.float   "latitude"
+    t.float   "longitude"
   end
 
 end

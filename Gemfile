@@ -5,6 +5,8 @@ gem 'rails', '3.2.14'
 gem 'pg'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'forecast_io'
+gem 'geocoder'
 
 group :development do
   gem 'better_errors'
