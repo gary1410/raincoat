@@ -1,4 +1,5 @@
 <h1>Hello <%= user.name %>!</h1>
+<%= user.display_city %>
 <h1>Current Temp is: <%= current_weather.apparentTemperature %></h1>
 <h1>Icon: <%= current_weather.icon %></h1>
 <h1>Sun Rise Time is: <%= daily_weather[0].sunriseTime %></h1>
@@ -7,3 +8,4 @@
 <h1>Low: <%= daily_weather[0].temperatureMin %></h1>
 <h1>High: <%= daily_weather[0].temperatureMax %></h1>
 <h1>Description: <%= daily_weather[0].summary %></h1>
+
