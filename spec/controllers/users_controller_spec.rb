@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'factory_girl'
 
-describe UsersController do 
+describe UsersController do
   before(:each) do
     @user = build(:user)
   end
@@ -16,6 +16,12 @@ describe UsersController do
       expect {
         post :create, user: @user.attributes
       }.to change { User.count }.by(1)
+    end
+
+    it "should create a session" do
+      expect {
+        post :create, user: @user.attributes
+        }.to change { session[:current_user_id] }
     end
 
     it "shouldn't create a user with invalid params" do

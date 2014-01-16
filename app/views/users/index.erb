@@ -1,40 +1,14 @@
 <div class="container">
-	<div id="clouds">
-	    <div class="cloud x1"></div>
-	    <div class="cloud x2"></div>
-	    <div class="cloud x3"></div>
-	    <div class="cloud x4"></div>
-	    <div class="cloud x5"></div>
-	</div>
-
-	<%= form_for @user, url: {action: "create"}, remote: true do |f| %>
-
-		<div class="form name">
-			<p>Personalized weather reports every morning, tailored to your routine, delivered by email or text</p>
-			<%= f.text_field :name, placeholder: "What's your name?" %>
-			<%= f.submit "Get Started", id: "name-submit", class: "button" %><br/>
+	<% if signed_in? %>
+		<div id="clouds">
+			<%= render partial: "ajaxhome", locals: {:user => current_user, :current_weather => current_weather(forecast), :daily_weather => daily_weather(forecast) } %>
+			<div class="cloud x1"></div>
+			<div class="cloud x2"></div>
+			<div class="cloud x3"></div>
+			<div class="cloud x4"></div>
+			<div class="cloud x5"></div>
 		</div>
-
-		<div class="form zipcode">
-			<h4>Hi, <span id="submitted-name">there</span>!</h4>
-			<p>To personalize your updates I need to know a few things about you. First, where are you at? <p>
-			<%= f.text_field :zipcode, placeholder: "What's your zip code?" %>
-			<%= f.submit "Next", id: "zipcode-submit", class: "button" %><br/>
-		</div>
-
-		<div class="form email">
-			<h3>Almost there!</h3>
-			<p>Sign up and tell me where to send your forecast.<br>
-			(I swear to God I won't spam you.)</p>
-
-			<%= f.text_field :email, placeholder: "What's your email address?" %><br>
-			<%= f.password_field :password, placeholder: "Enter a password" %><br>
-			<%= f.submit "Submit", id: "submit", class: "button" %>
-		</div>
-
-		<div class="form password">
-		<p>Watch this space</p>
-		</div>
-
+	<% else %>
+		<%= render partial: "signup_form" %>
 	<% end %>
 </div>

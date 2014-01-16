@@ -28,4 +28,11 @@ feature "User sign up" do
     click_button("Submit")
     expect(page).to have_content "#{@user.city}"
   end
+
+  scenario "session is created on signup", js: true do
+    session_user = create(:user)
+    page.set_rack_session(:current_user_id => session_user.id)
+    visit root_path
+    expect(page).to have_content "Hello #{session_user.name}!"
+  end
 end
