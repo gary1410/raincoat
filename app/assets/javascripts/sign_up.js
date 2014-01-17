@@ -51,8 +51,6 @@ var ScrollOn = {
       $('body').animate({scrollTop: $password}, 300)
     })
   }
-
-
 }
 
 $(document).ready(function() {
@@ -63,8 +61,3 @@ $(document).ready(function() {
   ScrollOn.clickZipcode();
   ScrollOn.clickEmail();
 })
-
-
-// $("button").click(function(){
-//    alert($("div").scrollTop());
-// });
