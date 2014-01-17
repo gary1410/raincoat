@@ -36,23 +36,21 @@ var ScrollOn = {
     })
   },
 
-  clickZipcode: function(){
-    $('#zipcode-submit').on('click', function(){
-      $('.email').css('display', 'block')
-      var $email = $('.email').position().top
-      $('body').animate({scrollTop: $email}, 300)
-    })
-  },
+clickZipcode: function(){
+	$('#zipcode-submit').on('click', function(){
+		$('.email').css('display', 'block')
+    var $email = $('.email').position().top
+   	$('body').animate({scrollTop: $email}, 300)
+   })
+},
 
-  clickEmail: function(){
+	clickEmail: function(){
     $('#email-submit').on('click', function(){
       $('.password').css('display', 'block')
       var $password = $('.password').position().top
       $('body').animate({scrollTop: $password}, 300)
     })
   }
-
-
 }
 
 $(document).ready(function() {
@@ -63,8 +61,3 @@ $(document).ready(function() {
   ScrollOn.clickZipcode();
   ScrollOn.clickEmail();
 })
-
-
-// $("button").click(function(){
-//    alert($("div").scrollTop());
-// });
