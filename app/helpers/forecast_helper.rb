@@ -1,7 +1,11 @@
 module ForecastHelper
   require 'forecast_io'
-  require 'dotenv'
-  Dotenv.load
+
+  begin
+    require 'dotenv'
+    Dotenv.load
+  rescue LoadError
+  end
 
 ForecastIO.api_key = ENV['FORECAST_API_KEY']
 
