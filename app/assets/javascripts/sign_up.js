@@ -9,6 +9,15 @@ var SignUp = {
 	}
 }
 
+var LogIn = {
+  display: function(){
+    $('.login_form').css('display','block')
+  },
+  hide: function(){
+    $('.login_form').css('display','none')
+  }
+}
+
 var SetWindow = {
   height: function(){
     var height = $(window).height();
@@ -60,4 +69,6 @@ $(document).ready(function() {
   ScrollOn.clickName();
   ScrollOn.clickZipcode();
   ScrollOn.clickEmail();
+  $('#login-button').on('click', LogIn.display)
+  $('.loign_form::before').on('click', LogIn.hide)
 })
