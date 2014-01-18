@@ -7,7 +7,7 @@ describe SessionsController do
   end
 
   it "#destroy" do
-    delete :destroy, id: { email: @user.email, password: @user.password }
+    delete :destroy
     expect(session[:current_user_id]).to be_nil
   end
 
