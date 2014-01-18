@@ -2,7 +2,7 @@ Raincoat::Application.routes.draw do
   root :to => 'users#index'
 
   resources :users, only: [:index, :create]
-  resources :sessions, only: [:destroy]
+  resources :sessions, only: [:create, :destroy]
 
   match '/logout', to: 'sessions#destroy', via: 'delete'
 
