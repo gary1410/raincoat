@@ -2,6 +2,10 @@ Raincoat::Application.routes.draw do
   root :to => 'users#index'
 
   resources :users, only: [:index, :create]
+  resources :sessions, only: [:destroy]
+
+  match '/logout', to: 'sessions#destroy', via: 'delete'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
