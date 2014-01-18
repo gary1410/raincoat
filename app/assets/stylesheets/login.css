@@ -1,0 +1,53 @@
+div.login{
+	z-index: 100000;
+	background-color: green;
+}
+
+div.circle{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	background-color: #e74c3c;
+	border-radius: 50%;
+}
+
+.login_form{
+	background: #e74c3c;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 35px 30px 10px;
+	z-index: 1000;
+	display: none;
+}
+
+.login_form:before{
+	font-family: FontAwesome;
+	position: absolute;
+	top: -12px;
+	right: -10px;
+	content: "\f057";
+	font-size: 2rem;
+	color: #f1c40f;
+}
+
+.login_form input {
+	display: block;
+}
+
+.login_form #login-button {
+	background-color: #f1c40f;
+	width: 7rem;
+	float: right;
+}
+
+#forget-password {
+	text-align: left;
+	font-family: 'Cabin', sans-serif;
+	color: blue;
+	font-size: 12px
+}
+
+input #user_email {
+	margin-bottom: 15px
+} 
