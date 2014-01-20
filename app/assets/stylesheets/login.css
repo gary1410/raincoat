@@ -1,17 +1,4 @@
-div.login{
-	z-index: 100000;
-	background-color: green;
-}
-
-div.circle{
-	position: relative;
-	width: 50px;
-	height: 50px;
-	background-color: #e74c3c;
-	border-radius: 50%;
-}
-
-.login_form{
+.login_modal{
 	background: #e74c3c;
 	position: absolute;
 	top: 50%;
@@ -21,12 +8,11 @@ div.circle{
 	display: none;
 }
 
-.login_form:before{
+.login_close {
 	font-family: FontAwesome;
 	position: absolute;
 	top: -12px;
 	right: -10px;
-	content: "\f057";
 	font-size: 2rem;
 	color: #f1c40f;
 }
