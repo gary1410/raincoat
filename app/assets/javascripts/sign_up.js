@@ -11,10 +11,10 @@ var SignUp = {
 
 var LogIn = {
   display: function(){
-    $('.login_form').css('display','block')
+    $('.login_modal').css('display','block')
   },
   hide: function(){
-    $('.login_form').css('display','none')
+    $('.login_modal').css('display','none')
   }
 }
 
@@ -70,5 +70,5 @@ $(document).ready(function() {
   ScrollOn.clickZipcode();
   ScrollOn.clickEmail();
   $('#login-button').on('click', LogIn.display)
-  $('.loign_form::before').on('click', LogIn.hide)
+  $('.fa-times-circle').on('click', LogIn.hide)
 })

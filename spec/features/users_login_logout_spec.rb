@@ -7,9 +7,10 @@ feature "User can login" do
     @user = create(:user)
   end
 
-  xscenario "with valid with saved information", js: true do
-    fill_in "session[email]", with: @user.email
-    fill_in "session[password]", with: @user.password
+  scenario "with valid with saved information", js: true do
+    find("#login-button").click
+    fill_in "user[email]", with: @user.email
+    fill_in "user[password]", with: @user.password
     click_button("Login")
     expect(page).to have_content "Hello #{@user.name}!"
   end
