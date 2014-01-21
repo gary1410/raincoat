@@ -6,15 +6,19 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
-
+  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Alegreya+Sans:400,900' rel='stylesheet' type='text/css'>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 </head>
 <body>
 
 <nav>
   <ul>
-    <li><%=link_to "Logout", logout_path, method: "delete" %></li>
-    <li><span id="login-button">Login</span></li>
+    <% if signed_in? %>
+      <li><%=link_to "Logout", logout_path, method: "delete" %></li>
+    <% else %>
+      <li><span id="login-button">Login</span></li>
+    <% end %>
     <li>Settings</li>
   </ul>
 </nav>
