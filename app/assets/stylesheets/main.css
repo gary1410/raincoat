@@ -1,5 +1,32 @@
 html {
 	font-size: 22px;
+	font-family: 'Cabin', sans-serif;
+}
+
+nav {
+	position: absolute;
+	width: 100%;
+	display: block;
+	z-index: 1000;
+}
+
+nav ul {
+	float: right;
+	/*background-color: red;*/
+	list-style-type: none;
+	width: 100%;
+	z-index: 1;
+}
+
+nav li {
+	color: black;
+	float: right;
+	padding: 1rem 1rem;
+	cursor: pointer;
+}
+
+li:hover {
+	background-color: rgba(0,0,0,.5);
 }
 
 .container{
@@ -29,13 +56,15 @@ html {
 }
 
 h1 {
-	position: relative;
-	z-index: 1;
-	text-align: center;
+/*	position: absolute;
+	bottom: 0;*/
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 6rem;
+  color: #f1c40f;
+	font-weight:bold;
 }
 
 .form {
-	font-family: 'Cabin', sans-serif;
 	display: block;
 	height: 900px;
 	width: 100%;
@@ -67,4 +96,13 @@ div.email {
 div.password{
 	display: none;
 	background-color: #f1c40f;
+}
+
+#forecast{
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	z-index: 900;
+	padding: 4rem 0rem;
 }

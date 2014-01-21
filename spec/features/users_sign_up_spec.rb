@@ -15,7 +15,7 @@ feature "User sign up" do
     fill_in "user_email", with: @user.email
     fill_in "user_password", with: @user.password
     click_button("Submit")
-    expect(page).to have_content "Hello #{@user.name}"
+    expect(page).to have_content "Hello #{@user.name}!"
   end
 
   scenario "with valid information, shows city when not Comani", js: true do

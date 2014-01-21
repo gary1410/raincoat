@@ -10,10 +10,11 @@
 		  <%=link_to "Forget password?", root_path, id: 'forget-password' %>
 		<% end %>
 	</div>
-
 	<% if signed_in? %>
 		<div id="clouds">
-			<%= render partial: "ajaxhome", locals: {:user => current_user, :current_weather => current_weather(forecast), :daily_weather => daily_weather(forecast) } %>
+		<div id="forecast">
+			<%= render partial: "ajaxhome", locals: {:user => current_user, :current_weather => current_weather(forecast), :daily_weather => daily_weather(forecast)} %>
+		</div>
 			<div class="cloud x1"></div>
 			<div class="cloud x2"></div>
 			<div class="cloud x3"></div>
