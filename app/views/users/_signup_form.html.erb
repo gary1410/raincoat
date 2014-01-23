@@ -27,14 +27,14 @@
   <div class="form name">
     <p>Don't be a stranger, let's get to know you!</p>
     <%= f.text_field :name, placeholder: "What's your name?" %>
-    <%= f.submit "Get Started", id: "name-submit", class: "button" %><br/>
+    <input type="button" value="Get Started" id="name-submit" class="button"/>
   </div>
 
   <div class="form zipcode">
     <h4>Hi, <span class="submitted-name">there</span>!</h4>
     <p>To get personalized service what's your zipcode?  We promise not to stalk you. <p>
     <%= f.text_field :zipcode, placeholder: "What's your zip code?" %>
-    <%= f.submit "Next", id: "zipcode-submit", class: "button" %><br/>
+    <input type="button" value="Next" id="zipcode-submit" class="button"/>
   </div>
 
   <div class="form email">
