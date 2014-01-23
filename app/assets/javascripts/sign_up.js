@@ -30,12 +30,20 @@ var insertName = {
   name: function(){
     $submittedName = $('#user_name').val()
     if ($submittedName){
-      $('#submitted-name').text($submittedName)
+      $('.submitted-name').text($submittedName)
     }
   }
 }
 
 var ScrollOn = {
+
+  letsBegin: function(){
+    $('.strip2').on('click', function(){
+      var $name = $('.name').position().top
+      $('body').animate({scrollTop: $name}, 300)
+    })
+  },
+
   clickName: function(){
     $('#name-submit').on('click', function(){
       $('.zipcode').css('display', 'block')
@@ -48,6 +56,7 @@ var ScrollOn = {
 clickZipcode: function(){
 	$('#zipcode-submit').on('click', function(){
 		$('.email').css('display', 'block')
+    insertName.name()
     var $email = $('.email').position().top
    	$('body').animate({scrollTop: $email}, 300)
    })
@@ -66,6 +75,7 @@ $(document).ready(function() {
 	SignUp.init();
   SetWindow.height();
   $(window).resize(SetWindow.height);
+  ScrollOn.letsBegin();
   ScrollOn.clickName();
   ScrollOn.clickZipcode();
   ScrollOn.clickEmail();

@@ -1,5 +1,18 @@
 <div id="clouds">
-      <h1>Raincoat</h1>
+      <header>
+        <h1>Raincoat</h1>
+      </header>
+
+          <div class="bottom-strips">
+            <div class="info strip1">
+              <h3>Personalized weather service at your fingertips</h3>
+            </div>
+            <div class="info strip2">
+              <h6>Let's Begin!</h6>
+            </div>
+            <div class="info strip3">
+            </div>
+          </div>
   <div id="forecast">
   </div>
       <div class="cloud x1"></div>
@@ -12,22 +25,22 @@
 <%= form_for @user, url: {action: "create"}, remote: true do |f| %>
 
   <div class="form name">
-    <p>Personalized weather reports every morning, tailored to your routine, delivered by email or text</p>
+    <p>Don't be a stranger, let's get to know you!</p>
     <%= f.text_field :name, placeholder: "What's your name?" %>
     <%= f.submit "Get Started", id: "name-submit", class: "button" %><br/>
   </div>
 
   <div class="form zipcode">
-    <h4>Hi, <span id="submitted-name">there</span>!</h4>
-    <p>To personalize your updates I need to know a few things about you. First, where are you at? <p>
+    <h4>Hi, <span class="submitted-name">there</span>!</h4>
+    <p>To get personalized service what's your zipcode?  We promise not to stalk you. <p>
     <%= f.text_field :zipcode, placeholder: "What's your zip code?" %>
     <%= f.submit "Next", id: "zipcode-submit", class: "button" %><br/>
   </div>
 
   <div class="form email">
-    <h3>Almost there!</h3>
-    <p>Sign up and tell me where to send your forecast.<br>
-    (I swear to God I won't spam you.)</p>
+    <h3>Almost done, <span class="submitted-name">there</span>!</h3>
+    <p>Where should we send your personalized forecast?<br>
+    (text coming soon!)</p>
 
     <%= f.text_field :email, placeholder: "What's your email address?" %><br>
     <%= f.password_field :password, placeholder: "Enter a password" %><br>
