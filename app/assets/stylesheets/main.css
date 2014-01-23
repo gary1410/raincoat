@@ -3,6 +3,56 @@ html {
 	font-family: 'Cabin', sans-serif;
 }
 
+header h1{
+	text-align: center;
+	margin-top: 6rem;
+	font-family: 'Alegreya Sans', sans-serif;
+  font-size: 6rem;
+  color: #f1c40f;
+	font-weight:bold;
+}
+
+.bottom-strips {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+.info {
+	color: #fff;
+}
+
+.strip1{
+	background-color: #8e44ad;
+	padding: 1rem 0rem;
+	text-align: center;
+}
+
+.strip2{
+	background: #A2C9F6;
+	padding: .5rem 0rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+.strip2:after {
+	content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+  bottom: 0px;
+  border: 25px transparent solid;
+  border-top: 25px #A2C9F6 solid;
+}
+
+.strip3{
+	background: #8e44ad;
+	padding: 1rem;
+}
+
 nav {
 	position: absolute;
 	width: 100%;
@@ -27,6 +77,11 @@ nav li {
 
 li:hover {
 	background-color: rgba(0,0,0,.5);
+}
+
+li a:link, a:visited {
+	text-decoration: none;
+	color: black;
 }
 
 .container{
@@ -55,14 +110,6 @@ li:hover {
 	background-color: darkgrey;
 }
 
-h1 {
-/*	position: absolute;
-	bottom: 0;*/
-  font-family: 'Alegreya Sans', sans-serif;
-  font-size: 6rem;
-  color: #f1c40f;
-	font-weight:bold;
-}
 
 .form {
 	display: block;
