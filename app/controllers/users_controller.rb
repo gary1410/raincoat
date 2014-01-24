@@ -18,7 +18,7 @@ include ForecastHelper
       session[:current_user_id] = user.id
       render :json => { :name => render_to_string( :partial => "ajaxhome", locals: { :user => user, :current_weather => current_weather(forecast), :daily_weather => daily_weather(forecast) }) }
     else
-      redirect_to root_path
+      render :json => { :error => user.errors.full_messages.join(", ")}, :status => :unprocessable_entity
     end
   end
 
