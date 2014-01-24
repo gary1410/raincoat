@@ -1,12 +1,20 @@
 var SignUp = {
 	init: function() {
-		$('#new_user').on("ajax:success", this.displayHome)
+		$('.new_user').on("ajax:success", this.displayHome)
+    $('.new_user').on("ajax:error", this.displayErrors)
 	},
 
 	displayHome: function(event, data, status, xhr) {
-		$('#new_user').css('display','none')
+		$('.form').css('display','none')
+    $('header').css('display', 'none')
+    $('.bottom-strips').css('display', 'none')
 		$('#forecast').append(data.name)
-	}
+    $('body').animate({scrollTop: 0}, 300)
+	},
+
+  displayErrors: function(event, xhr, status, error){
+    $('.errors').append(xhr.responseJSON.error)
+  }
 }
 
 var LogIn = {
@@ -46,10 +54,16 @@ var ScrollOn = {
 
   clickName: function(){
     $('#name-submit').on('click', function(){
-      $('.zipcode').css('display', 'block')
-      insertName.name()
-      var $zipcode = $('.zipcode').position().top
-      $('body').animate({scrollTop: $zipcode}, 300)
+      if ($('#user_name').val() === "") {
+        $('.input-name-error').slideToggle(300)
+        console.log("hi")
+      } else {
+        debugger
+        $('.zipcode').css('display', 'block')
+        insertName.name()
+        var $zipcode = $('.zipcode').position().top
+        $('body').animate({scrollTop: $zipcode}, 300)
+      }
     })
   },
 
