@@ -14,4 +14,5 @@ feature "User can login" do
     click_button("Login")
     expect(page).to have_content "Hello #{@user.name}!"
   end
+
 end
