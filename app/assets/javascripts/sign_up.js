@@ -93,6 +93,6 @@ $(document).ready(function() {
   ScrollOn.clickName();
   ScrollOn.clickZipcode();
   ScrollOn.clickEmail();
-  $('#login-button').on('click', LogIn.display)
+  $('#nav-login').on('click', LogIn.display)
   $('.fa-times-circle').on('click', LogIn.hide)
 })
