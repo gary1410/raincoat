@@ -34,6 +34,32 @@ var SetWindow = {
   }
 }
 
+var keyPressEnter = {
+  name: function(){
+    $('#user_name').on('keypress', function(e){
+      if(e.keyCode == 13) {
+        $('#name-submit').click();
+      }
+    })
+  },
+
+  zipcode: function(){
+    $('#user_zipcdoe').on('keypress', function(e){
+      if (e.keyCode == 13){
+        $('#zipcode-submit').click();
+      }
+    })
+  },
+
+  submit: function(){
+    $('#user_password', '#user_email').on('keypress', function(e){
+      if (e.keyCode == 13){
+        $('#submit').click();
+      }
+    })
+  }
+}
+
 var insertName = {
   name: function(){
     $submittedName = $('#user_name').val()
@@ -44,7 +70,6 @@ var insertName = {
 }
 
 var ScrollOn = {
-
   letsBegin: function(){
     $('.strip2').on('click', function(){
       var $name = $('.name').position().top
@@ -56,9 +81,7 @@ var ScrollOn = {
     $('#name-submit').on('click', function(){
       if ($('#user_name').val() === "") {
         $('.input-name-error').slideToggle(300)
-        console.log("hi")
       } else {
-        debugger
         $('.zipcode').css('display', 'block')
         insertName.name()
         var $zipcode = $('.zipcode').position().top
@@ -87,6 +110,9 @@ clickZipcode: function(){
 
 $(document).ready(function() {
 	SignUp.init();
+  keyPressEnter.name();
+  keyPressEnter.zipcode();
+  keyPressEnter.submit();
   SetWindow.height();
   $(window).resize(SetWindow.height);
   ScrollOn.letsBegin();
