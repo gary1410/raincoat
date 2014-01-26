@@ -44,7 +44,7 @@ var keyPressEnter = {
   },
 
   zipcode: function(){
-    $('#user_zipcdoe').on('keypress', function(e){
+    $('#user_zipcode').on('keypress', function(e){
       if (e.keyCode == 13){
         $('#zipcode-submit').click();
       }
