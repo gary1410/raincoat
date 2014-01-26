@@ -17,7 +17,7 @@
     <% if signed_in? %>
       <li><%=link_to "Logout", logout_path, method: "delete" %></li>
     <% else %>
-      <li><span id="login-button">Login</span></li>
+      <li id="nav-login"><span id="login-button">Login</span></li>
     <% end %>
     <li>Settings</li>
   </ul>
