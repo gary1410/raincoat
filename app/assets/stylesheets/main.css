@@ -7,8 +7,8 @@ header h1{
 	text-align: center;
 	margin-top: 6rem;
 	font-family: 'Alegreya Sans', sans-serif;
-  font-size: 6rem;
-  color: #f1c40f;
+	font-size: 6rem;
+	color: #f1c40f;
 	font-weight:bold;
 }
 
@@ -37,15 +37,15 @@ header h1{
 
 .strip2:after {
 	content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
+	position: absolute;
+	width: 0;
+	height: 0;
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-  bottom: 0px;
-  border: 25px transparent solid;
-  border-top: 25px #A2C9F6 solid;
+	bottom: 0px;
+	border: 25px transparent solid;
+	border-top: 25px #A2C9F6 solid;
 }
 
 .strip3{
@@ -62,7 +62,6 @@ nav {
 
 nav ul {
 	float: right;
-	/*background-color: red;*/
 	list-style-type: none;
 	width: 100%;
 	z-index: 1;
