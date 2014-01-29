@@ -38,6 +38,7 @@ var keyPressEnter = {
   name: function(){
     $('#user_name').on('keypress', function(e){
       if(e.keyCode == 13) {
+        e.preventDefault();
         $('#name-submit').click();
       }
     })
@@ -46,6 +47,7 @@ var keyPressEnter = {
   zipcode: function(){
     $('#user_zipcode').on('keypress', function(e){
       if (e.keyCode == 13){
+        e.preventDefault();
         $('#zipcode-submit').click();
       }
     })
