@@ -7,7 +7,7 @@ feature "User sign up" do
     @user = build(:user)
   end
 
-  xscenario "with valid information", js: true do
+  scenario "with valid information", js: true do
     fill_in "user[name]", with: @user.name
     click_button("name-submit")
     fill_in "user_zipcode", with: @user.zipcode
