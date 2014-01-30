@@ -1,11 +1,12 @@
 <h1>Hello <%= user.name %>!</h1>
 <%= user.display_city %>
-<h1>Current Temp is: <%= current_weather.apparentTemperature %>&#8457;</h1>
+<h1>Current Temp is: <%= current_weather.temperature %>&#8457;</h1>
+<h2>But it feels like....<%= current_weather.apparentTemperature %>&#8457;</h2>
 <h1>Icon: <%= current_weather.icon %></h1>
 <h1>Sun Rise Time is: <%= daily_weather[0].sunriseTime %></h1>
 <h1>Sun Set Time is: <%= daily_weather[0].sunsetTime %></h1>
 <h1>Precipitation Probability is: <%= daily_weather[0].precipProbability %></h1>
-<h1>Low: <%= daily_weather[0].temperatureMin %></h1>
-<h1>High: <%= daily_weather[0].temperatureMax %></h1>
+<h1>Low: <%= daily_weather[0].temperatureMin %>&#8457;</h1>
+<h1>High: <%= daily_weather[0].temperatureMax %>&#8457;</h1>
 <h1>Description: <%= daily_weather[0].summary %></h1>
 
