@@ -1,12 +1,14 @@
-<h1>Hello <%= user.name %>!</h1>
-<%= user.display_city %>
-<h1>Current Temp is: <%= current_weather.temperature %>&#8457;</h1>
-<h2>But it feels like....<%= current_weather.apparentTemperature %>&#8457;</h2>
-<h1>Icon: <%= current_weather.icon %></h1>
-<h1>Sun Rise Time is: <%= daily_weather[0].sunriseTime %></h1>
-<h1>Sun Set Time is: <%= daily_weather[0].sunsetTime %></h1>
-<h1>Precipitation Probability is: <%= daily_weather[0].precipProbability %></h1>
-<h1>Low: <%= daily_weather[0].temperatureMin %>&#8457;</h1>
-<h1>High: <%= daily_weather[0].temperatureMax %>&#8457;</h1>
-<h1>Description: <%= daily_weather[0].summary %></h1>
-
+<div class="weather">
+  <div class="col left">
+    <h1>Currently <%= current_weather.temperature %>&#8457;</h1>
+    <h4><%= daily_weather[0].summary %></h4>
+    <h6><%= user.display_city %></h6>
+  </div>
+  <div class="col right">
+    <h1>Hello <%= user.name %>!</h1>
+    <h2>But it feels like....<%= current_weather.apparentTemperature %>&#8457;</h2>
+    <h1>Icon: <%= current_weather.icon %></h1>
+    <h1>Low: <%= daily_weather[0].temperatureMin %>&#8457;</h1>
+    <h1>High: <%= daily_weather[0].temperatureMax %>&#8457;</h1>
+  </div>
+</div>

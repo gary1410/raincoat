@@ -1,0 +1,23 @@
+.weather {
+  background-color: yellow;
+  font-family: 'Roboto', sans-serif;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.col{
+  /*margin: 0 auto;*/
+  float: left;
+  width: 476px;
+  /*display: inline-block;*/
+  padding: 2px;
+}
+
+.right {
+  /*float: left;*/
+  background-color: red;
+}
+
+.left {
+  background-color: blue;
+}

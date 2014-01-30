@@ -24,4 +24,3 @@ include ForecastHelper
   end
 
 end
-
