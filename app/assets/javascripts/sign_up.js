@@ -9,6 +9,7 @@ var SignUp = {
     $('header').css('display', 'none')
     $('.bottom-strips').css('display', 'none')
 		$('#forecast').append(data.name)
+    $('#login-logout').replaceWith(data.logout)
     $('body').animate({scrollTop: 0}, 300)
 	},
 

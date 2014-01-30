@@ -14,11 +14,13 @@
 
 <nav>
   <ul>
+  <div id="login-logout">
     <% if signed_in? %>
       <li><%=link_to "Logout", logout_path, method: "delete" %></li>
     <% else %>
       <li id="nav-login"><span id="login-button">Login</span></li>
     <% end %>
+    </div>
     <li>Settings</li>
   </ul>
 </nav>
