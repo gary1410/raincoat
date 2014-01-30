@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 
   def display_city
     if self.city != "Comani"
-      return "<h1>Current Location: #{self.city}</h1>".html_safe
+      return "#{self.city}".html_safe
     end
   end
 end
