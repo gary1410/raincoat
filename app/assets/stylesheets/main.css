@@ -103,6 +103,7 @@ li a:link, a:visited {
 
 .button {
 	width: 8rem;
+	cursor: pointer;
 }
 
 .button:hover{
