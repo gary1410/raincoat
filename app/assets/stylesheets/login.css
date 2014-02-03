@@ -9,6 +9,7 @@
 	padding: 35px 30px 10px;
 	z-index: 1000;
 	display: none;
+	cursor: pointer;
 }
 
 .login_close {
@@ -30,6 +31,7 @@
 	background-color: #f1c40f;
 	width: 7rem;
 	float: right;
+	cursor: pointer;
 }
 
 #forget-password {
@@ -41,4 +43,4 @@
 
 input #user_email {
 	margin-bottom: 15px
-} 
+}
