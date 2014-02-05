@@ -84,6 +84,7 @@ li a:link, a:visited {
 }
 
 .container{
+	position: relative;
 	width: 100%;
 }
 
@@ -146,10 +147,11 @@ div.password{
 }
 
 #forecast{
-	position: absolute;
+	font-family: 'Roboto', sans-serif;
+	overflow: hidden;
+	position: relative;
 	margin: 0 auto;
-	left: 0;
-	right: 0;
+	width: 80%;
 	z-index: 900;
 	padding: 4rem 0rem;
 }
