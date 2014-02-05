@@ -1,55 +1,56 @@
 <div id="clouds">
-      <header>
-        <h1>Raincoat</h1>
-      </header>
+  <header>
+    <h1>Raincoat</h1>
+  </header>
+  
+  <div class="bottom-strips">
+    <div class="info strip1">
+      <h3>Personalized weather service at your fingertips</h3>
+    </div>
+    <div class="info strip2">
+      <h6>Let's Begin!</h6>
+    </div>
+    <div class="info strip3">
+    </div>
+  </div>
 
-          <div class="bottom-strips">
-            <div class="info strip1">
-              <h3>Personalized weather service at your fingertips</h3>
-            </div>
-            <div class="info strip2">
-              <h6>Let's Begin!</h6>
-            </div>
-            <div class="info strip3">
-            </div>
-          </div>
   <div id="forecast">
   </div>
-      <div class="cloud x1"></div>
-      <div class="cloud x2"></div>
-      <div class="cloud x3"></div>
-      <div class="cloud x4"></div>
-      <div class="cloud x5"></div>
+  
+  <div class="cloud x1"></div>
+  <div class="cloud x2"></div>
+  <div class="cloud x3"></div>
+  <div class="cloud x4"></div>
+  <div class="cloud x5"></div>
 </div>
 
 <%= form_for @user, url: {action: "create"}, remote: true do |f| %>
+<div class="form name">
 
-  <div class="form name">
-    <p>Don't be a stranger, let's get to know you!</p>
-    <%= f.text_field :name, placeholder: "What's your name?" %>
-    <input type="button" value="Get Started" id="name-submit" class="button"/>
-  </div>
+  <p>Don't be a stranger, let's get to know you!</p>
+  <%= f.text_field :name, placeholder: "What's your name?" %>
+  <input type="button" value="Get Started" id="name-submit" class="button"/>
+</div>
 
-  <div class="form zipcode">
-    <h4>Hi, <span class="submitted-name">there</span>!</h4>
-    <p>To get personalized service what's your zipcode?  We promise not to stalk you. <p>
+<div class="form zipcode">
+  <h4>Hi, <span class="submitted-name">there</span>!</h4>
+  <p>To get personalized service what's your zipcode?  We promise not to stalk you. <p>
     <%= f.text_field :zipcode, placeholder: "What's your zip code?" %>
     <input type="button" value="Next" id="zipcode-submit" class="button"/>
-  </div>
+</div>
 
-  <div class="form email">
-    <h3>Almost done, <span class="submitted-name">there</span>!</h3>
-    <p>Where should we send your personalized forecast?<br>
+<div class="form email">
+  <h3>Almost done, <span class="submitted-name">there</span>!</h3>
+  <p>Where should we send your personalized forecast?<br>
     (text coming soon!)</p>
 
     <%= f.text_field :email, placeholder: "What's your email address?" %><br>
     <%= f.password_field :password, placeholder: "Enter a password" %><br>
     <%= f.submit "Submit", id: "submit", class: "button" %>
     <p class="errors"></p>
-  </div>
+</div>
+    <% end %>
 
-  <div class="form password">
-    <p>Watch this space</p>
-  </div>
-
-<% end %>
+<div class="form password">
+  <p>Watch this space</p>
+</div>

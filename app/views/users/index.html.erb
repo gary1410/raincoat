@@ -8,13 +8,13 @@
 		  <%= f.password_field :password, placeholder: "Enter your password" %>
 		  <%= f.submit "Login", id: "login-button" %>
 		  <%=link_to "Forget password?", root_path, id: 'forget-password' %>
-		<% end %>
+		<% end %>	
 	</div>
 	<% if signed_in? %>
 		<div id="clouds">
-		<div id="forecast">
-			<%= render partial: "ajaxhome", locals: {:user => current_user, :current_weather => current_weather(forecast), :daily_weather => daily_weather(forecast)} %>
-		</div>
+			<div id="forecast">
+				<%= render partial: "ajaxhome", locals: {:user => current_user, :current_weather => current_weather(forecast), :daily_weather => daily_weather(forecast)} %>
+			</div>
 			<div class="cloud x1"></div>
 			<div class="cloud x2"></div>
 			<div class="cloud x3"></div>

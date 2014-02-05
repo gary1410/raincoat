@@ -11,6 +11,7 @@ body {
 
 
 #clouds{
+  position: relative;
   /*padding: 100px 0;*/
   background: #A2C9F6;
   /*background: #c9dbe9;*/
