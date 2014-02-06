@@ -14,6 +14,7 @@ include ForecastHelper
   def create
     user = User.new(params[:user])
     if user.save
+      UserMailer.signup_confirmation(user).deliver
       forecast = get_current_forecast(user.latitude, user.longitude)
       session[:current_user_id] = user.id
       render :json => { :name => render_to_string( :partial => "ajaxhome", locals: { :user => user, :current_weather => current_weather(forecast), :daily_weather => daily_weather(forecast) }),
